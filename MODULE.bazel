@@ -174,6 +174,12 @@ crate.spec(
     package = "nix",
     version = "0.30.1",
 )
+
+crate.spec(
+    package = "cliclack",
+    version = "0.3.8",
+)
+
 crate.spec(
     features = ["experimental-derive"],
     package = "postcard",
@@ -338,6 +344,7 @@ crate.from_specs(
     # aarch64-unknown-nto-qnx710 or best aarch64-unknown-nto00 which is not fully supported in any rust_rules version for now (even if rustc 1.86.0 already supports it)
     supported_platform_triples = [
         "aarch64-unknown-nto-qnx710",  # This enables also QNX8 becasue OS and CPU for platform matches....
+        "x86_64-pc-nto-qnx710",
         "x86_64-unknown-linux-gnu",
         "x86_64-unknown-none",
     ],
